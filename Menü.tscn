@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://drrmihjys115q"]
+
+[ext_resource type="Script" path="res://menü.gd" id="1_htukq"]
+[ext_resource type="Script" path="res://HighscoreManager.gd" id="2_635pg"]
+
+[node name="CanvasLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1080.0
+offset_bottom = -1920.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_htukq")
+
+[node name="HighscoreManager" type="Node" parent="."]
+script = ExtResource("2_635pg")
+
+[node name="HighscoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 277.6
+offset_top = 24.8
+offset_right = 396.6
+offset_bottom = 47.8
+text = "Highscore:0000"
+
+[node name="Level" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.241
+anchor_right = 0.316
+anchor_bottom = 0.286
+offset_left = 106.8
+offset_top = 331.2
+offset_right = 325.8
+offset_bottom = 398.2
+action_mode = 0
+text = "Oyna"
+
+[node name="EndlessStart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.241
+anchor_right = 0.316
+anchor_bottom = 0.286
+offset_left = 106.8
+offset_top = 453.2
+offset_right = 325.8
+offset_bottom = 520.2
+action_mode = 0
+text = "Sonsuz Mod"
+
+[node name="MarketButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.241
+anchor_right = 0.316
+anchor_bottom = 0.286
+offset_left = 106.8
+offset_top = 575.2
+offset_right = 325.8
+offset_bottom = 642.2
+action_mode = 0
+text = "Market"

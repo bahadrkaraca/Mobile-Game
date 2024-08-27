@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bednmeyce8cru"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ygv2x"]
+size = Vector2(7, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_bllmi"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lyquy"]
+data = PackedVector3Array(3.5, 0, 10, -3.5, 0, 10, 3.5, 0, -10, -3.5, 0, 10, -3.5, 0, -10, 3.5, 0, -10)
+
+[node name="Terrain_0" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.881)
+mesh = SubResource("PlaneMesh_ygv2x")
+
+[node name="işlem_0" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67293, 1.68098, 1.45143)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="işlem_0"]
+transform = Transform3D(3.51, 0, 0, 0, 3.51, 0, 0, 0, 3.51, 0, 0.15574, -1.98689)
+mesh = SubResource("QuadMesh_bllmi")
+
+[node name="CollisionShape3D" type="CollisionPolygon3D" parent="işlem_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.01117)
+polygon = PackedVector2Array(1.75836, 1.9366, -1.73174, 1.89767, -1.71787, -1.5747, 1.75947, -1.59235)
+
+[node name="işlem_1" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72615, 1.68098, 1.45143)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="işlem_1"]
+transform = Transform3D(3.51, 0, 0, 0, 3.51, 0, 0, 0, 3.51, 0, 0.15574, -1.98689)
+mesh = SubResource("QuadMesh_bllmi")
+
+[node name="CollisionShape3D" type="CollisionPolygon3D" parent="işlem_1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.01117)
+polygon = PackedVector2Array(1.75836, 1.9366, -1.73174, 1.89767, -1.71787, -1.5747, 1.75947, -1.59235)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_lyquy")
